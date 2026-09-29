@@ -1,0 +1,84 @@
+{
+  "accounts": [
+    { "id": "acc_brokerage", "name": "Individual Brokerage", "type": "taxable", "currency": "USD", "taxAdvantaged": false },
+    { "id": "acc_roth", "name": "Roth IRA", "type": "roth_ira", "currency": "USD", "taxAdvantaged": true },
+    { "id": "acc_401k", "name": "Employer 401(k)", "type": "traditional_401k", "currency": "USD", "taxAdvantaged": true }
+  ],
+  "holdings": [
+    { "accountId": "acc_brokerage", "symbol": "AAPL", "quantity": 40,  "costBasis": 6200 },
+    { "accountId": "acc_brokerage", "symbol": "NVDA", "quantity": 60,  "costBasis": 5400 },
+    { "accountId": "acc_brokerage", "symbol": "JPM",  "quantity": 25,  "costBasis": 4300 },
+    { "accountId": "acc_brokerage", "symbol": "XOM",  "quantity": 30,  "costBasis": 3150 },
+    { "accountId": "acc_brokerage", "symbol": "VTI",  "quantity": 35,  "costBasis": 8400 },
+    { "accountId": "acc_brokerage", "symbol": "CASH", "quantity": 4001.55, "costBasis": 4001.55 },
+
+    { "accountId": "acc_roth", "symbol": "VTI",  "quantity": 45,  "costBasis": 9900 },
+    { "accountId": "acc_roth", "symbol": "VXUS", "quantity": 120, "costBasis": 6960 },
+    { "accountId": "acc_roth", "symbol": "COST", "quantity": 6,   "costBasis": 4320 },
+    { "accountId": "acc_roth", "symbol": "IBIT", "quantity": 50,  "costBasis": 2100 },
+    { "accountId": "acc_roth", "symbol": "CASH", "quantity": 4357.50, "costBasis": 4357.50 },
+
+    { "accountId": "acc_401k", "symbol": "VTI",  "quantity": 80,  "costBasis": 17600 },
+    { "accountId": "acc_401k", "symbol": "BND",  "quantity": 150, "costBasis": 10800 },
+    { "accountId": "acc_401k", "symbol": "VXUS", "quantity": 90,  "costBasis": 5130 },
+    { "accountId": "acc_401k", "symbol": "VNQ",  "quantity": 40,  "costBasis": 3400 },
+    { "accountId": "acc_401k", "symbol": "JNJ",  "quantity": 20,  "costBasis": 3100 },
+    { "accountId": "acc_401k", "symbol": "CASH", "quantity": 1021.25, "costBasis": 1021.25 }
+  ],
+  "transactions": [
+    { "id": "txn_001", "accountId": "acc_401k",      "symbol": "CASH", "type": "deposit",  "quantity": 20000, "price": 1,      "date": "2023-01-31", "note": "Rollover from previous employer" },
+    { "id": "txn_002", "accountId": "acc_401k",      "symbol": "VTI",  "type": "buy",      "quantity": 50,    "price": 200.00, "date": "2023-02-01" },
+    { "id": "txn_003", "accountId": "acc_401k",      "symbol": "BND",  "type": "buy",      "quantity": 150,   "price": 72.00,  "date": "2023-02-01" },
+    { "id": "txn_004", "accountId": "acc_roth",      "symbol": "CASH", "type": "deposit",  "quantity": 6500,  "price": 1,      "date": "2023-04-20", "note": "2023 contribution" },
+    { "id": "txn_005", "accountId": "acc_roth",      "symbol": "VTI",  "type": "buy",      "quantity": 25,    "price": 210.00, "date": "2023-05-10" },
+    { "id": "txn_006", "accountId": "acc_roth",      "symbol": "VXUS", "type": "buy",      "quantity": 120,   "price": 58.00,  "date": "2023-05-10" },
+    { "id": "txn_007", "accountId": "acc_401k",      "symbol": "CASH", "type": "deposit",  "quantity": 6000,  "price": 1,      "date": "2023-08-01", "note": "Payroll contributions H1" },
+    { "id": "txn_008", "accountId": "acc_401k",      "symbol": "VXUS", "type": "buy",      "quantity": 90,    "price": 57.00,  "date": "2023-08-15" },
+    { "id": "txn_009", "accountId": "acc_brokerage", "symbol": "CASH", "type": "deposit",  "quantity": 28000, "price": 1,      "date": "2024-01-05", "note": "Initial funding" },
+    { "id": "txn_010", "accountId": "acc_roth",      "symbol": "CASH", "type": "deposit",  "quantity": 7000,  "price": 1,      "date": "2024-01-10", "note": "2024 contribution" },
+    { "id": "txn_011", "accountId": "acc_brokerage", "symbol": "JPM",  "type": "buy",      "quantity": 25,    "price": 172.00, "date": "2024-01-22" },
+    { "id": "txn_012", "accountId": "acc_brokerage", "symbol": "MSFT", "type": "buy",      "quantity": 10,    "price": 380.00, "date": "2024-02-14" },
+    { "id": "txn_013", "accountId": "acc_brokerage", "symbol": "AAPL", "type": "buy",      "quantity": 25,    "price": 148.00, "date": "2024-03-12" },
+    { "id": "txn_014", "accountId": "acc_brokerage", "symbol": "VTI",  "type": "buy",      "quantity": 35,    "price": 240.00, "date": "2024-04-09" },
+    { "id": "txn_015", "accountId": "acc_roth",      "symbol": "COST", "type": "buy",      "quantity": 6,     "price": 720.00, "date": "2024-05-22" },
+    { "id": "txn_016", "accountId": "acc_brokerage", "symbol": "NVDA", "type": "buy",      "quantity": 40,    "price": 82.50,  "date": "2024-06-18", "note": "Post 10:1 split" },
+    { "id": "txn_017", "accountId": "acc_401k",      "symbol": "CASH", "type": "deposit",  "quantity": 8000,  "price": 1,      "date": "2024-06-28", "note": "Payroll contributions + match" },
+    { "id": "txn_018", "accountId": "acc_401k",      "symbol": "JNJ",  "type": "buy",      "quantity": 20,    "price": 155.00, "date": "2024-07-19" },
+    { "id": "txn_019", "accountId": "acc_brokerage", "symbol": "XOM",  "type": "buy",      "quantity": 30,    "price": 105.00, "date": "2024-08-14" },
+    { "id": "txn_020", "accountId": "acc_roth",      "symbol": "VTI",  "type": "buy",      "quantity": 20,    "price": 232.50, "date": "2024-09-16" },
+    { "id": "txn_021", "accountId": "acc_401k",      "symbol": "VNQ",  "type": "buy",      "quantity": 40,    "price": 85.00,  "date": "2024-10-02" },
+    { "id": "txn_022", "accountId": "acc_brokerage", "symbol": "AAPL", "type": "buy",      "quantity": 15,    "price": 166.67, "date": "2024-11-05" },
+    { "id": "txn_023", "accountId": "acc_brokerage", "symbol": "CASH", "type": "deposit",  "quantity": 3000,  "price": 1,      "date": "2025-01-06", "note": "Year-end bonus" },
+    { "id": "txn_024", "accountId": "acc_roth",      "symbol": "CASH", "type": "deposit",  "quantity": 7000,  "price": 1,      "date": "2025-01-08", "note": "2025 contribution" },
+    { "id": "txn_025", "accountId": "acc_roth",      "symbol": "IBIT", "type": "buy",      "quantity": 50,    "price": 42.00,  "date": "2025-01-14", "note": "Small crypto sleeve" },
+    { "id": "txn_026", "accountId": "acc_brokerage", "symbol": "NVDA", "type": "buy",      "quantity": 20,    "price": 105.00, "date": "2025-02-03" },
+    { "id": "txn_027", "accountId": "acc_brokerage", "symbol": "MSFT", "type": "sell",     "quantity": 10,    "price": 415.00, "date": "2025-03-20", "note": "Trimmed to fund NVDA add" },
+    { "id": "txn_028", "accountId": "acc_401k",      "symbol": "CASH", "type": "deposit",  "quantity": 7000,  "price": 1,      "date": "2025-04-01", "note": "Payroll contributions" },
+    { "id": "txn_029", "accountId": "acc_401k",      "symbol": "VTI",  "type": "buy",      "quantity": 30,    "price": 253.33, "date": "2025-04-15" },
+    { "id": "txn_030", "accountId": "acc_brokerage", "symbol": "JPM",  "type": "dividend", "quantity": 1,     "price": 30.00,  "date": "2025-04-30" },
+    { "id": "txn_031", "accountId": "acc_brokerage", "symbol": "AAPL", "type": "dividend", "quantity": 1,     "price": 10.00,  "date": "2025-05-15" },
+    { "id": "txn_032", "accountId": "acc_brokerage", "symbol": "XOM",  "type": "dividend", "quantity": 1,     "price": 29.70,  "date": "2025-06-10" },
+    { "id": "txn_033", "accountId": "acc_brokerage", "symbol": "VTI",  "type": "dividend", "quantity": 1,     "price": 31.85,  "date": "2025-06-27" },
+    { "id": "txn_034", "accountId": "acc_roth",      "symbol": "VXUS", "type": "dividend", "quantity": 1,     "price": 95.40,  "date": "2025-12-22" },
+    { "id": "txn_035", "accountId": "acc_roth",      "symbol": "VTI",  "type": "dividend", "quantity": 1,     "price": 42.10,  "date": "2025-12-24" },
+    { "id": "txn_036", "accountId": "acc_roth",      "symbol": "CASH", "type": "deposit",  "quantity": 7000,  "price": 1,      "date": "2026-01-07", "note": "2026 contribution" },
+    { "id": "txn_037", "accountId": "acc_401k",      "symbol": "BND",  "type": "dividend", "quantity": 1,     "price": 51.25,  "date": "2026-03-05" }
+  ],
+  "targetAllocation": {
+    "targets": {
+      "us_equity": 55,
+      "intl_equity": 15,
+      "bond": 15,
+      "real_estate": 5,
+      "crypto": 3,
+      "cash": 7
+    },
+    "rebalanceThresholdPct": 5
+  },
+  "watchlist": [
+    { "symbol": "AMZN",  "addedOn": "2026-06-02", "note": "Waiting for a pullback below $200 before starting a position." },
+    { "symbol": "GOOGL", "addedOn": "2026-06-02", "note": "Cheapest of the mega-caps on forward earnings." },
+    { "symbol": "SCHD",  "addedOn": "2026-07-15", "note": "Candidate for a dividend tilt in the taxable account." },
+    { "symbol": "TSM",   "addedOn": "2026-08-20", "note": "Would add international tech exposure beyond VXUS." }
+  ]
+}

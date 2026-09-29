@@ -1,0 +1,102 @@
+[
+  {
+    "id": "note_001",
+    "symbol": "NVDA",
+    "date": "2026-08-28",
+    "author": "Internal Research — Semis",
+    "title": "Data-center demand still outrunning supply, but position size is the risk",
+    "summary": "Hyperscaler capex guidance for the next four quarters remains above consensus, supporting continued revenue growth. Our concern is not the thesis but concentration: the position has roughly tripled since purchase and now dominates single-stock risk in the taxable account. We favour trimming into strength rather than adding.",
+    "sentiment": "bullish",
+    "tags": ["semiconductors", "ai", "concentration"]
+  },
+  {
+    "id": "note_002",
+    "symbol": "AAPL",
+    "date": "2026-07-30",
+    "author": "Internal Research — Consumer Tech",
+    "title": "Services mix keeps margins resilient; hardware cycle is the swing factor",
+    "summary": "Services now contribute the majority of gross profit, which cushions the slower device cycle. Valuation is full relative to expected growth. We see it as a quality core holding but not a candidate for adding at current prices.",
+    "sentiment": "neutral",
+    "tags": ["mega-cap", "services", "valuation"]
+  },
+  {
+    "id": "note_003",
+    "symbol": "XOM",
+    "date": "2026-06-18",
+    "author": "Internal Research — Energy",
+    "title": "Cash flow supports the dividend, but price is a function of crude",
+    "summary": "Break-even costs have fallen after the Permian consolidation, so the dividend looks well covered even in a lower-crude scenario. The equity remains highly correlated to oil prices, so treat it as a diversifier against inflation rather than a growth position.",
+    "sentiment": "neutral",
+    "tags": ["energy", "dividend", "inflation-hedge"]
+  },
+  {
+    "id": "note_004",
+    "symbol": "BND",
+    "date": "2026-09-10",
+    "author": "Internal Research — Fixed Income",
+    "title": "Aggregate bonds finally earning their keep",
+    "summary": "With the yield to maturity comfortably above inflation, core bonds are once again a reasonable ballast. Duration risk is moderate. For portfolios below their bond target, this is the simplest instrument to close the gap.",
+    "sentiment": "bullish",
+    "tags": ["bonds", "rebalancing", "duration"]
+  },
+  {
+    "id": "note_005",
+    "symbol": "IBIT",
+    "date": "2026-09-02",
+    "author": "Internal Research — Digital Assets",
+    "title": "Keep the crypto sleeve small and rebalance mechanically",
+    "summary": "Bitcoin's volatility remains several times that of equities. The ETF wrapper removes custody risk but not price risk. Our house view is a 1-5% sleeve, rebalanced on a schedule rather than on conviction, and always held in a tax-advantaged account to avoid short-term-gain drag.",
+    "sentiment": "neutral",
+    "tags": ["crypto", "volatility", "position-sizing"]
+  },
+  {
+    "id": "note_006",
+    "symbol": "VXUS",
+    "date": "2026-08-12",
+    "author": "Internal Research — Global Equity",
+    "title": "International valuations offer a margin of safety",
+    "summary": "Developed ex-US markets trade at a meaningful discount to the US on both earnings and book value, and currency exposure has helped rather than hurt this year. We continue to recommend holding international at or slightly above target weight.",
+    "sentiment": "bullish",
+    "tags": ["international", "valuation", "diversification"]
+  },
+  {
+    "id": "note_007",
+    "symbol": "COST",
+    "date": "2026-07-08",
+    "author": "Internal Research — Consumer Staples",
+    "title": "Best-in-class operator, priced like it",
+    "summary": "Membership renewal rates and traffic remain exceptional, but the multiple leaves little room for disappointment. Hold; do not add above the current range.",
+    "sentiment": "neutral",
+    "tags": ["retail", "quality", "valuation"]
+  },
+  {
+    "id": "note_008",
+    "symbol": "SCHD",
+    "date": "2026-09-15",
+    "author": "Internal Research — Income Strategies",
+    "title": "A dividend tilt that does not sacrifice quality",
+    "summary": "The fund's quality and yield screens have produced lower drawdowns than the broad market with a yield roughly three times that of the total-market index. Suitable for investors who want income in a taxable account, given the qualified-dividend treatment.",
+    "sentiment": "bullish",
+    "tags": ["dividends", "income", "taxable"]
+  },
+  {
+    "id": "note_009",
+    "symbol": "TSM",
+    "date": "2026-08-25",
+    "author": "Internal Research — Semis",
+    "title": "The indispensable foundry, with geopolitical tail risk",
+    "summary": "Leading-edge capacity is effectively sold out through next year. The discount to US peers reflects geopolitical risk that cannot be diversified away within the stock. Size any position accordingly.",
+    "sentiment": "bullish",
+    "tags": ["semiconductors", "international", "geopolitics"]
+  },
+  {
+    "id": "note_010",
+    "symbol": "JPM",
+    "date": "2026-05-20",
+    "author": "Internal Research — Financials",
+    "title": "Fortress balance sheet; watch credit costs into a slower economy",
+    "summary": "Net interest income has plateaued and provisions are creeping higher, but capital return remains strong. A reasonable hold with a dependable dividend.",
+    "sentiment": "neutral",
+    "tags": ["banks", "dividend", "credit-cycle"]
+  }
+]

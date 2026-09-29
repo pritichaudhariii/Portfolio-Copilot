@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.next/
+out/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Runtime data written by the MCP server (seeded from packages/mcp-server/data/seed)
+packages/mcp-server/data/runtime/
+
+# Logs & OS files
+npm-debug.log*
+*.log
+.DS_Store
+
+# Markdown files Next.js generates inside the app folder on every run
+apps/web/*.md

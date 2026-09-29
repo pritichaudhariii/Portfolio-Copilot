@@ -1,0 +1,30 @@
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: packages/mcp-server/Dockerfile
+    environment:
+      PORT: "3001"
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:-}
+      DATA_DIR: /data
+    volumes:
+      - mcp-data:/data
+    ports:
+      - "3001:3001"
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:?set ANTHROPIC_API_KEY in your shell or a .env file}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-sonnet-5-5}
+      MCP_SERVER_URL: http://mcp-server:3001/mcp
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN:-}
+    depends_on:
+      - mcp-server
+    ports:
+      - "3000:3000"
+
+volumes:
+  mcp-data:

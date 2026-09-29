@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-copilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio Copilot — an MCP-based agent with a full-stack Next.js UI, powered by the Anthropic API.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "concurrently -n mcp,web -c cyan,magenta \"npm run dev -w @portfolio-copilot/mcp-server\" \"npm run dev -w @portfolio-copilot/web\"",
+    "build": "npm run build -w @portfolio-copilot/mcp-server && npm run build -w @portfolio-copilot/web",
+    "start:mcp": "npm run start -w @portfolio-copilot/mcp-server",
+    "start:web": "npm run start -w @portfolio-copilot/web",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run build -w @portfolio-copilot/mcp-server && npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

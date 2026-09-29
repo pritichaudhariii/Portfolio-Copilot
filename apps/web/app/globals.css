@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Theme tokens. Runtime CSS variables so light/dark switch instantly; */
+/* Tailwind utilities (text-ink, bg-sheet, …) resolve to them inline.  */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --paper: #eef1f4;
+  --sheet: #ffffff;
+  --sheet-2: #f6f8fa;
+  --ink: #16202a;
+  --ink-muted: #5c6b7a;
+  --ink-faint: #8b98a5;
+  --rule: #d6dde4;
+  --rule-strong: #b8c2cc;
+  --blue: #1f4e9c;
+  --blue-soft: #e4ecf9;
+  --blue-ink: #163a73;
+  --on-blue: #ffffff;
+  --gain: #1b7f5a;
+  --gain-soft: #e1f2ea;
+  --loss: #b3372f;
+  --loss-soft: #f8e5e3;
+  --amber: #b9770e;
+  --amber-soft: #f9efd9;
+  --shadow: 0 1px 2px rgba(22, 32, 42, 0.06), 0 8px 24px -12px rgba(22, 32, 42, 0.12);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --paper: #0f151d;
+  --sheet: #161e29;
+  --sheet-2: #1c2633;
+  --ink: #e6ebf0;
+  --ink-muted: #98a6b5;
+  --ink-faint: #6b7a89;
+  --rule: #263241;
+  --rule-strong: #34435a;
+  --blue: #7aa7f0;
+  --blue-soft: #1d2d47;
+  --blue-ink: #a9c6f7;
+  --on-blue: #0b1220;
+  --gain: #4cc38a;
+  --gain-soft: #163326;
+  --loss: #f0776c;
+  --loss-soft: #3b1f1d;
+  --amber: #e0a83a;
+  --amber-soft: #3a2c12;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -12px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-sheet: var(--sheet);
+  --color-sheet-2: var(--sheet-2);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-blue-ink: var(--blue-ink);
+  --color-on-blue: var(--on-blue);
+  --color-gain: var(--gain);
+  --color-gain-soft: var(--gain-soft);
+  --color-loss: var(--loss);
+  --color-loss-soft: var(--loss-soft);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.panel {
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* Text fields draw their focus state on their wrapper (focus-within), so skip them here. */
+*:focus-visible:not(textarea, input) {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+textarea:focus-visible,
+input:focus-visible {
+  outline: none;
+}
+
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+
+/* Streaming caret at the end of assistant text */
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background: var(--ink-muted);
+  animation: caret-blink 1s steps(2, start) infinite;
+}
+@keyframes caret-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.rise {
+  animation: rise 220ms ease-out both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Markdown rendered inside assistant messages */
+.chat-md > * + * {
+  margin-top: 0.7em;
+}
+.chat-md p {
+  max-width: 70ch;
+}
+.chat-md h1,
+.chat-md h2,
+.chat-md h3 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.1em;
+}
+.chat-md h1 {
+  font-size: 1.15rem;
+}
+.chat-md h2 {
+  font-size: 1.05rem;
+}
+.chat-md h3 {
+  font-size: 1rem;
+}
+.chat-md ul,
+.chat-md ol {
+  padding-left: 1.35em;
+  max-width: 70ch;
+}
+.chat-md ul {
+  list-style: disc;
+}
+.chat-md ol {
+  list-style: decimal;
+}
+.chat-md li + li {
+  margin-top: 0.25em;
+}
+.chat-md strong {
+  font-weight: 600;
+}
+.chat-md a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.chat-md code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--sheet-2);
+  border: 1px solid var(--rule);
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+}
+.chat-md pre {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--sheet-2);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+.chat-md pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.chat-md table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  width: auto;
+  display: block;
+  overflow-x: auto;
+}
+.chat-md th,
+.chat-md td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.4rem 0.9rem 0.4rem 0;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.chat-md th {
+  font-weight: 500;
+  color: var(--ink-muted);
+  border-bottom-color: var(--rule-strong);
+}
+.chat-md blockquote {
+  border-left: 3px solid var(--rule-strong);
+  padding-left: 0.85rem;
+  color: var(--ink-muted);
+}
+.chat-md hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
